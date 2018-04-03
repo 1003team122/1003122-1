@@ -1,197 +1,205 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <title>ENG1003 Prac Week 5 - Card and Deck</title>
-    <style>
-        #outputArea {
-            padding: .25em;
-            border: solid black 2px;
-            margin: 3em;
-            
-            height: 20em;
-            width: 40em;
-            
-            overflow-y: scroll;
-            
-            font-family: consolas, 'courier new', monospace;
-            font-size: 1em;
-            color: rgb(50, 50, 250);
-            
-            background-color: rgb(225,225,225) ;
-            
-            float: left;
-        }
-        
-        p {
-            color: green;
-        }
-        
-    </style>
+/**
+ * Tap Code Processor7676767676767676767676
+ * Author: Monika Burford, Morgan Henderson, Michael Goodrick, Nathaniel Schutt
+ *    For your reference...
+ * 		event will hold an Event object with the pixels in
+ *   	event.detail.data and the timestamp in event.timeStamp
+ */
 
-    </head>
+_listen = function(event)
+{
+   
+for (i=1; i<=400; i++)
+    {
+        let result = ""
+
+        result += (event.detail.data[4*i-4] + event.detail.data[4*i-3] + event.detail.data[4*i-2])
+
+        result = result/1200
+
+        if (result >= 100)
+            {
+                event.flash = true;
+            }
+        else event.flash = false;
+    }
+
+let previous = color, myTimeString, myColorString;
+
+if (event.flash = true);
+    {
+        if (previous = black);
+        {
+            let finalTime = event.timeStamp;
+
+            myTimeString += finalTime + " </br> ";
+
+            myColorString += "T" + " </br> ";   
+        }
+
+        if (previous = white);
+        {
+           let color = white;
+        }
+    }
+
+if( event.flash = false);
+    {
+        if (previous = white);
+        {
+            let initialTime = event.timeStamp;
+
+            myTimeString += initialTime + " </br> ";
+
+            myColorString += "G" + " </br> ";
+        }
+
+        if (previous = black);
+        {
+            let color = black;
+        }
+    }
+
+let timeDif
+
+for (i=1; i < myTimeString.length; i++)
+    {
+        timeDif += myTimeString(i+1) - myTimeString(i);
+    }
+
+let sequence
+
+Math.min(timeDif) = halfGapLength
+
+let reference = 2*halfGapLength
+
+for (j=1; j < timeDif.length; j++)
+    {
+        if (myColorString(j) = G); 
+        {
+            if (timeDif(j) > reference); 
+            {
+                sequence = fullGap;
+            }
+
+            if (timeDif(j) < reference); 
+            {
+                sequence = halfGap;
+            }
+        }
+
+        if (myColorString(j) = T); 
+        {
+            sequence = tap;
+        }
+
+    }
+
+};
+
+/**
+ * Your header documentation here for clear
+ */
+clear = function()
+{
+	// your code here
+};
+
+/**
+ * Your header documentation here for translate
+ */
+translate = function()
+
+{
+
+//By using a for loop, we incremented through the entire original array, declaring a new array at each "stop".
     
-    <body>
-        <div id="outputArea"></div>
+let myarray= Array(5);
 
-        <script>
+let i;
 
-            // Class Constructors
-            // ========================================================
-                 
-            // Card class
-            // ----------
-            //
-            class Card
-            {
-                constructor(value, suit)
-                {
-                    // Private attributes:
-                
-                    this._value = value;   // Integer value 1-13 inclusive
-                    this._suit = suit;     // Integer value 1-4 inclusive
-                }
-                
-                // Public methods:
-                
-                get value()
-                {
-                    return this._value;
-                }
-                
-                set value(newValue)
-                {
-                    if (newValue >= 1 && newValue <= 13)
-                    {
-                        this._value = newValue;
-                    }
-                }
-                
-                get suit()
-                {
-                    return this._suit;
-                }
-                
-                set suit(newSuit)
-                {
-                    if (newSuit >= 1 && newSuit <= 13)
-                    {
-                        this.suit = newSuit;
-                    }
-                }
-                                
-                toString()
-                {
-                    return "The " + this._getValueName() + " of " + this._getSuitName() + "<br>";  
-                }
-                
-                // Private methods:
-                
-                _getValueName()
-                {
-                    let valueLookup = ["", "ace", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king" ];
-                    return valueLookup[this._value];
-                } 
-                
-                _getSuitName()
-                {
-                    let valueLookup = ["", "Hearts", "Diamonds", "Clubs", "Spades"];
-                    return valueLookup[this._suit];
-                } 
-            }    
+for (i=0; i<5; i++)
+    {
+        myarray[i]= Array(5);
+    }
 
+        myarray[0][0] = "e";
+        myarray[0][1] = "t";
+        myarray[0][2] = "a";
+        myarray[0][3] = "n";
+        myarray[0][4] = "d";
 
-            // Deck class
-            // ----------
-            //
-            class Deck
-            {
-                // Private attributes:
-                constructor()
-                {
-                    this._cards = [];
-                    let i;
-                    let j;
+        myarray[1][0] = "o";
+        myarray[1][1] = "i";
+        myarray[1][2] = "r";
+        myarray[1][3] = "u";
+        myarray[1][4] = "c";
 
-                    
-                    for (j=1;j<=4;j++){
-                         for (i=1;i<=13;i++){
-                             let card = new Card(i, j);
-                        this._cards.push(card)
-                         }
-                    }  
+        myarray[2][0] = "s";
+        myarray[2][1] = "h";
+        myarray[2][2] = "m";
+        myarray[2][3] = "f";
+        myarray[2][4] = "p";
 
-                }
-                
-                // Public methods:
+        myarray[3][0] = "l";
+        myarray[3][1] = "y";
+        myarray[3][2] = "g";
+        myarray[3][3] = "v";
+        myarray[3][4] = "j";
 
-                shuffle()
-                {
-                    let card2Index;
-                    let tempCard;
-                
-                    // For each card in deck array, swap it with another card
-                    // at a random position in the array.
-                    for (let card1Index = 0; card1Index < this._cards.length; card1Index++)
-                    {
-                        card2Index = Math.floor(Math.random() * this._cards.length);
-                        
-                        // Swap 'em
-                        tempCard = this._cards[card1Index];
-                        this._cards[card1Index] = this._cards[card2Index] ;
-                        this._cards[card2Index] = tempCard;
-                    }
-                }
-                
-                // This method should remove the next card from the Deck and 
-                // return it.  If called when the Deck is empty it should
-                // return null.
-                dealCard()
-                {
-                    // Put your code to deal a card here
-                    //let j;
-                    //let myOutput =[];
-                    //for (j=51;j>=0;j--){
-                        //myOutput += this._cards[j]
-                        //this._cards.pop
-                    //}
-                    //output = myOutput
-                    return this._cards.pop()
-                   
-                }
-                
-            }
-            
-            let outputAreaRef = document.getElementById("outputArea");
-            let output = "";    
+        myarray[4][0] = "w";
+        myarray[4][1] = "b";
+        myarray[4][2] = "x";
+        myarray[4][3] = "q";
+        myarray[4][4] = "z";
+    
+let rx_code;
 
-            exerciseCard();
-            exerciseDeck();
-            
-            outputAreaRef.innerHTML = output;    
+if (sequence = tap);
+    {
+        rx_code += "*"
+    }
 
-            
-            function exerciseCard()
-            {
-                let card1 = new Card(7, 4);
-                output += card1.toString();
-            }
-            
-            function exerciseDeck()
-            {
-                let deck1 = new Deck();
-                
-                deck1.shuffle();
-                
-                // Note: this assumes there are 52 cards in the deck.
-                for (let i = 1; i <= 52; i++)
-                {
-                    output += deck1.dealCard() + "<br/>";
-                }
-                
-            }
+if (sequence = fullGap);
+    {
+        rx_code += "-"
+    }
+
+let x;
+
+let coordinatesString
+
+for (i=1; i<rx_code.length; i++); 
+    { 
+        if (rx_code(i)=*) 
+        {        
+            x += 1;
+        }
+        else 
+        {
+            coordinatesString += x;
+            x=0;
+        }
+    }
 
 
-        </script>
-    </body>
-</html>
+let translatedMessage
+
+for (i=1; i<=coordinatesString.length; i= i+2)
+    {
+        translatedMessage += myarray[coordinatesString(i)][coordinatesString(i+1)];  
+    }
+        
+let rxspacesubstring = "wuw", rxksubstring = "k";
+        
+if (rxtranslated.includes("wuw");
+    {
+        rxspacesubstring = " ";
+    }
+if (rxtranslated.includes)
+
+
+case "qc": return "k";
+case "wuw": return " ";
+    
+};
