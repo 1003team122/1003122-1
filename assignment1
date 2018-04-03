@@ -6,6 +6,8 @@
  *   	event.detail.data and the timestamp in event.timeStamp
  */
 
+let sequence
+
 _listen = function(event)
 {
    
@@ -67,8 +69,6 @@ for (i=1; i < myTimeString.length; i++)
         timeDif += myTimeString(i+1) - myTimeString(i);
     }
 
-let sequence
-
 Math.min(timeDif) = halfGapLength
 
 let reference = 2*halfGapLength
@@ -108,6 +108,7 @@ clear = function()
 /**
  * Your header documentation here for translate
  */
+
 translate = function()
 
 {
@@ -190,16 +191,10 @@ for (i=1; i<=coordinatesString.length; i= i+2)
         translatedMessage += myarray[coordinatesString(i)][coordinatesString(i+1)];  
     }
         
-let rxspacesubstring = "wuw", rxksubstring = "k";
-        
-if (rxtranslated.includes("wuw");
-    {
-        rxspacesubstring = " ";
-    }
-if (rxtranslated.includes)
+let ConvertedOne =translatedMessage.replace ("wuw", " ");
 
+let rx_translated = ConvertedOne.replace ("qc", "k")
 
-case "qc": return "k";
-case "wuw": return " ";
+// Converting the special characters using a replace function
     
 };
